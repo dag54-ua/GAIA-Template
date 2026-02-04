@@ -89,3 +89,11 @@
 - Implemented incident list feed with loading/error states.
 - Created IncidentCard with Shadcn UI and date-fns.
 - Verified with Playwright E2E tests.
+
+**Milestone**: Executed plan INC-USER-003-DB-T01 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/infrastructure/models/incident.py
+- backend/alembic/versions/d13b2d87b6c7_add_deleted_at_to_incidents.py
+**Notes**:
+- Added deleted_at column for soft delete support.
+- Migration applied successfully.

@@ -83,7 +83,7 @@
 
 #### Tickets for INC-USER-003
 
-1. - [ ] **INC-USER-003-DB-T01 — Soft Delete Support**
+1. - [x] **INC-USER-003-DB-T01 — Soft Delete Support** (2026-02-04)
    - **Type**: DB
    - **Description**: Add support for soft deletion to maintain history/audit.
      - Add column: `deleted_at` (Timestamp, Nullable) to `incidents`.
