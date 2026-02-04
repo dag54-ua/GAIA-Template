@@ -90,7 +90,7 @@
    - **Deliverables**: Alembic migration.
    - **Dependencies**: INC-USER-002-DB-T01.
 
-2. - [ ] **INC-USER-003-BE-T02 — Delete Incident Endpoint**
+2. - [x] **INC-USER-003-BE-T02 — Delete Incident Endpoint** (2026-02-04)
    - **Type**: BE
    - **Description**: Implement `DELETE /api/v1/incidents/{id}`.
      - **Security (Critical)**: Verify `incident.owner_id == current_user.id`. Return `403` if mismatch.

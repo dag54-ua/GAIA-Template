@@ -24,3 +24,13 @@ async def list_incidents(
     if limit > 100:
         limit = 100 # Hard limit
     return await service.list_incidents(limit, offset)
+
+# [Feature: Incident Management] [Story: INC-USER-003] [Ticket: INC-USER-003-BE-T02]
+@router.delete("/{incident_id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_incident(
+    incident_id: UUID,
+    service: IncidentService = Depends(get_incident_service),
+    current_user_id: UUID = Depends(get_current_user_id)
+):
+    await service.delete_incident(incident_id, current_user_id)
+    return None

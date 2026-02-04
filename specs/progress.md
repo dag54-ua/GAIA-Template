@@ -97,3 +97,14 @@
 **Notes**:
 - Added deleted_at column for soft delete support.
 - Migration applied successfully.
+
+**Milestone**: Executed plan INC-USER-003-BE-T02 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/application/services/incident_service.py
+- backend/app/presentation/routers/incidents.py
+- backend/app/infrastructure/repositories/incident_repository_impl.py
+- backend/tests/integration/test_delete_incident.py
+**Notes**:
+- Implemented DELETE endpoint with BOLA/IDOR protection.
+- Updated list query to filter deleted incidents.
+- All tests passed (ownership check, soft delete).
