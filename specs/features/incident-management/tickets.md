@@ -55,7 +55,7 @@
    - **Deliverables**: Alembic migration for index (if not created in T01).
    - **Dependencies**: INC-USER-001-DB-T01.
 
-2. - [ ] **INC-USER-002-BE-T02 — List Incidents Endpoint**
+2. - [x] **INC-USER-002-BE-T02 — List Incidents Endpoint** (2026-02-04)
    - **Type**: BE
    - **Description**: Implement `GET /api/v1/incidents`.
      - **Pagination**: Implement limit/offset (default limit 50).

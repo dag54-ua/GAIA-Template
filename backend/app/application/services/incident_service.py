@@ -20,3 +20,6 @@ class IncidentService:
             owner_id=owner_id
         )
         return await self.repository.create(incident)
+
+    async def list_incidents(self, limit: int, offset: int) -> list[Incident]:
+        return await self.repository.list(limit, offset)
