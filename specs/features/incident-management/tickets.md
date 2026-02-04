@@ -20,7 +20,7 @@
    - **Deliverables**: Alembic migration script.
    - **Dependencies**: User table existing.
 
-2. - [ ] **INC-USER-001-BE-T02 — Create Incident Endpoint**
+2. - [x] **INC-USER-001-BE-T02 — Create Incident Endpoint** (2026-02-04)
    - **Type**: BE
    - **Description**: Implement `POST /api/v1/incidents`.
      - Validate input using Pydantic V2 (`CreateIncidentRequest`).

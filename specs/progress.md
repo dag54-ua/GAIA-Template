@@ -27,3 +27,14 @@
 - specs/features/incident-management/plan_INC-USER-003-DB-T01.md
 - specs/features/incident-management/plan_INC-USER-003-BE-T02.md
 - specs/features/incident-management/plan_INC-USER-003-FE-T03.md
+
+## 2026-02-04
+**Milestone**: Executed plan INC-USER-001-DB-T01 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/infrastructure/models/incident.py
+- backend/alembic/versions/bb4ceecf8220_create_incidents_table.py
+- backend/tests/integration/test_incidents_db.py
+**Notes**:
+- Scaffolding (docker-compose, backend structure) completed.
+- Incidents table created with Enum category and User FK.
+- Verified with integration tests against Postgres.
