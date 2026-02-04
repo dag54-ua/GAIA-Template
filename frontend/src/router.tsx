@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "@/layouts/AppLayout";
 import CreateIncidentPage from "@/features/incidents/pages/CreateIncidentPage";
+import IncidentsPage from "@/features/incidents/pages/IncidentsPage";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ export const router = createBrowserRouter([
         },
         {
             path: "incidents",
-            element: <div>Incident List (Coming Soon)</div>
+            element: <IncidentsPage />
         }
     ]
   },

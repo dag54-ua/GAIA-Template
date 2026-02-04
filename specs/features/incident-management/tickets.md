@@ -65,7 +65,7 @@
    - **Deliverables**: Endpoint, Tests.
    - **Dependencies**: INC-USER-002-DB-T01.
 
-3. - [ ] **INC-USER-002-FE-T03 — Incident List Feed**
+3. - [x] **INC-USER-002-FE-T03 — Incident List Feed** (2026-02-04)
    - **Type**: FE
    - **Description**: Display the list of incidents.
      - Component: `IncidentList`.
