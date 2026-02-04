@@ -38,3 +38,24 @@
 - Scaffolding (docker-compose, backend structure) completed.
 - Incidents table created with Enum category and User FK.
 - Verified with integration tests against Postgres.
+
+**Milestone**: Executed plan INC-USER-001-BE-T02 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/application/services/incident_service.py
+- backend/app/presentation/routers/incidents.py
+- backend/tests/integration/test_incidents_api.py
+**Notes**:
+- Implemented `create_incident` with XSS sanitization (bleach).
+- Wired Router, Service, and Repository.
+- Added dependency overrides for test isolation.
+- Integration tests passed covering Success, XSS Strip, and Auth check.
+
+**Milestone**: Executed plan INC-USER-001-FE-T03 (workflow: /execute-plan)
+**Artifacts**:
+- frontend/src/features/incidents/components/CreateIncidentForm.tsx
+- frontend/src/features/incidents/api/create-incident.ts
+- frontend/tests/e2e/create-incident.spec.ts
+**Notes**:
+- Initialized Frontend (React+Vite+TS+Shadcn) because it was missing.
+- Implemented incident creation form using Zod, React Hook Form, and Shadcn UI components (recreated).
+- Verified with Playwright E2E tests (Mocked API).

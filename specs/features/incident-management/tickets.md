@@ -30,7 +30,7 @@
    - **Deliverables**: Router, Service, Schema, Tests.
    - **Dependencies**: INC-USER-001-DB-T01.
 
-3. - [ ] **INC-USER-001-FE-T03 — Incident Creation Form**
+3. - [x] **INC-USER-001-FE-T03 — Incident Creation Form** (2026-02-04)
    - **Type**: FE
    - **Description**: UI for reporintg a new incident.
      - Route: `/incidents/new` (or modal).
