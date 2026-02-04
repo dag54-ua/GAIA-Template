@@ -99,7 +99,7 @@
    - **Deliverables**: Endpoint updates, permission logic, ownership tests.
    - **Dependencies**: INC-USER-003-DB-T01.
 
-3. - [ ] **INC-USER-003-FE-T03 — Delete Action UI**
+3. - [x] **INC-USER-003-FE-T03 — Delete Action UI** (2026-02-04)
    - **Type**: FE
    - **Description**: Add delete capability to the UI.
      - **Conditional Rendering**: Show "Trash" icon ONLY on cards where `incident.owner_id === current_user.id`.

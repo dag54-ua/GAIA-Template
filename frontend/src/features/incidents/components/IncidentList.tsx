@@ -1,10 +1,15 @@
 // [Feature: Incident Management] [Story: INC-USER-002] [Ticket: INC-USER-002-FE-T03]
+// [Feature: Incident Management] [Story: INC-USER-003] [Ticket: INC-USER-003-FE-T03]
 import { useIncidents } from "../api/get-incidents";
 import { IncidentCard } from "./IncidentCard";
 import { Loader2 } from "lucide-react";
 
 export function IncidentList() {
   const { data: incidents, isLoading, isError } = useIncidents();
+  
+  // TODO: Replace with actual auth context when available
+  // For now, using mock user ID from header pattern
+  const currentUserId = localStorage.getItem("mock_user_id") || undefined;
 
   if (isLoading) {
     return (
@@ -33,7 +38,11 @@ export function IncidentList() {
   return (
     <div className="space-y-4 max-w-2xl mx-auto">
         {incidents.map((incident) => (
-            <IncidentCard key={incident.id} incident={incident} />
+            <IncidentCard 
+              key={incident.id} 
+              incident={incident} 
+              currentUserId={currentUserId}
+            />
         ))}
     </div>
   );
