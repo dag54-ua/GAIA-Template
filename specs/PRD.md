@@ -1,0 +1,110 @@
+# PRD – App Web de Gestión de Incidencias para Asociación de Vecinos
+
+## 1. Visión del Producto
+Crear una aplicación web sencilla, accesible y moderna que permita a los vecinos de una asociación **reportar, eliminar y consultar incidencias** relacionadas con la comunidad (mantenimiento, ruidos, limpieza, seguridad, etc.), fomentando la transparencia y la colaboración entre vecinos y administradores.
+
+## 2. Objetivos del Producto
+- Facilitar la comunicación de incidencias dentro de la asociación.
+- Aumentar la visibilidad de los problemas comunes del vecindario.
+- Reducir el uso de canales informales (WhatsApp, emails dispersos).
+- Proporcionar una experiencia de usuario clara, rápida y moderna.
+
+## 3. Público Objetivo / Usuarios
+- Vecinos registrados de la asociación.
+- Administradores de la asociación (fase futura).
+
+## 4. Problema a Resolver
+Actualmente, las incidencias se comunican de forma desestructurada, lo que provoca:
+- Falta de trazabilidad.
+- Duplicación de incidencias.
+- Desconocimiento del estado de los problemas.
+- Frustración entre vecinos.
+
+## 5. Alcance del Producto (In-Scope)
+- Crear incidencias.
+- Eliminar incidencias propias.
+- Consultar incidencias creadas por otros vecinos.
+- Visualización clara y ordenada de incidencias.
+- Interfaz limpia y moderna (responsive).
+
+## 6. Fuera de Alcance (Out-of-Scope – v1)
+- Comentarios en incidencias.
+- Estados avanzados (en progreso, resuelta).
+- Notificaciones push o por email.
+- Roles avanzados y permisos complejos.
+- App móvil nativa.
+
+## 7. Funcionalidades Clave
+
+### 7.1 Gestión de Incidencias
+- Crear una incidencia con:
+  - Título
+  - Descripción
+  - Categoría (ej. limpieza, ruido, mantenimiento)
+  - Fecha de creación (automática)
+- Eliminar incidencias creadas por el propio usuario.
+- Visualizar un listado de incidencias de toda la comunidad.
+
+### 7.2 Visualización
+- Listado cronológico (más recientes primero).
+- Indicador visual de categoría.
+- Vista clara y legible de cada incidencia.
+- Diseño responsive (desktop y móvil).
+
+## 8. Requisitos Funcionales
+- RF1: El sistema debe permitir a un vecino crear una incidencia.
+- RF2: El sistema debe permitir a un vecino eliminar solo sus propias incidencias.
+- RF3: El sistema debe permitir visualizar incidencias de otros vecinos.
+- RF4: El sistema debe actualizar el listado de incidencias en tiempo real o al refrescar.
+- RF5: El sistema debe validar campos obligatorios al crear una incidencia.
+
+## 9. Requisitos No Funcionales
+- RNF1: La aplicación debe cargar en menos de 2 segundos.
+- RNF2: La interfaz debe ser accesible y usable (UX/UI moderno).
+- RNF3: Diseño responsive y compatible con navegadores modernos.
+- RNF4: Arquitectura preparada para futuras ampliaciones.
+
+## 10. Experiencia de Usuario (UX/UI)
+- Estilo visual limpio y minimalista.
+- Uso de colores neutros con acentos por categoría.
+- Tipografía legible.
+- Acciones principales visibles (crear / eliminar).
+- Feedback claro al usuario (mensajes de éxito o error).
+
+## 11. Métricas de Éxito
+- Número de incidencias creadas por semana.
+- Porcentaje de vecinos activos.
+- Tiempo medio de uso por sesión.
+- Reducción de incidencias reportadas por canales externos.
+
+## 12. Riesgos y Suposiciones
+- Riesgo: Baja adopción inicial por parte de los vecinos.
+- Riesgo: Uso indebido (incidencias duplicadas o irrelevantes).
+- Suposición: Los vecinos tienen acceso básico a web y correo electrónico.
+
+## 13. Evolución Futura (Roadmap Alto Nivel)
+- Estados de incidencia (abierta, en progreso, resuelta).
+- Comentarios y seguimiento.
+- Panel de administración.
+- Notificaciones.
+- App móvil.
+
+## 14. Detailed Feature Specs
+
+### 14.1 Incident Management
+**[Spec Link](specs/features/incident-management/feature-descr.md)**
+
+**Overview:** 
+The core capability of the application allows registered neighbors to report, view, and delete (their own) community maintenance issues. This feature centralizes communication to replace informal channels, ensuring visibility and reducing duplicates.
+
+**Core Roles:**
+- **Neighbor (`USER`)**: Can create incidents, view the full community list, and delete their own submitted incidents.
+
+**High-Level Rules:**
+- **Public/Shared View**: All authenticated users can see all incidents.
+- **Ownership Control**: Only the creator can delete an incident.
+- **Immutable History**: Incidents cannot be edited once created (only deleted and re-created if necessary).
+
+**Key Constraints:**
+- Must validate inputs to prevent XSS.
+- Must respond in <1s for the main feed.
