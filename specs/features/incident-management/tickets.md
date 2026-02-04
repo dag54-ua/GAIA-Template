@@ -48,7 +48,7 @@
 
 #### Tickets for INC-USER-002
 
-1. - [ ] **INC-USER-002-DB-T01 — Optimize Incidents Query**
+1. - [x] **INC-USER-002-DB-T01 — Optimize Incidents Query** (2026-02-04)
    - **Type**: DB
    - **Description**: Ensure efficient retrieval for the chronological feed.
      - Add Index: `idx_incidents_created_at_desc` on `(created_at DESC)`.
