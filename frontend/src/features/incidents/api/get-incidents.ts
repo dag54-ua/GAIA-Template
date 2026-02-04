@@ -9,8 +9,14 @@ export const useIncidents = (limit = 50, offset = 0) => {
   return useQuery({
     queryKey: ["incidents", limit, offset],
     queryFn: async (): Promise<Incident[]> => {
+      // TODO: Replace with actual auth when available
+      const mockUserId = localStorage.getItem("mock_user_id") || "00000000-0000-0000-0000-000000000001";
+      
       const response = await axios.get(`${API_BASE_URL}/incidents`, {
         params: { limit, offset },
+        headers: {
+          "X-User-Id": mockUserId,
+        },
       });
       return response.data;
     },

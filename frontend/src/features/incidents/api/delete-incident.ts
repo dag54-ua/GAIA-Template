@@ -9,7 +9,14 @@ export const useDeleteIncident = () => {
 
   return useMutation({
     mutationFn: async (incidentId: string) => {
-      await axios.delete(`${API_BASE_URL}/incidents/${incidentId}`);
+      // TODO: Replace with actual auth when available
+      const mockUserId = localStorage.getItem("mock_user_id") || "00000000-0000-0000-0000-000000000001";
+      
+      await axios.delete(`${API_BASE_URL}/incidents/${incidentId}`, {
+        headers: {
+          "X-User-Id": mockUserId,
+        },
+      });
     },
     onSuccess: () => {
       // Invalidate and refetch incidents list
